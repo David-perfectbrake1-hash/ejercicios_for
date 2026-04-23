@@ -9,33 +9,39 @@
 <body>
 
     <header class="header">
-        <button class="btn-bubble" onclick="generarTablas()">¡PROBAR!</button>
+        <div class="instrucciones">
+            <h2>¡Hola! 👋</h2>
+            <p>Escribe un número para empezar a jugar</p>
+        </div>
+        
+        <div class="controles">
+            <div class="input-group">
+                <label for="txt-numero">¿Qué tabla quieres?</label>
+                <input type="number" id="txt-numero" placeholder="Ej: 5" min="1" max="100">
+            </div>
+            <button class="btn-bubble" onclick="generarTablas()">¡Magia! ✨</button>
+        </div>
     </header>
 
     <main class="container">
-        <h1>¡La Divertida Tabla del 3!</h1>
+        <div id="mensaje-ayuda" class="ayuda-visual">
+            <p>🌟 ¡Escribe un número arriba y presiona el botón naranja! 🌟</p>
+        </div>
         
-        <div class="table-container">
-            <table class="tabla-infantil">
-                <thead>
-                    <tr>
-                        <th>Pregunta</th>
-                        <th>Resultado</th>
-                    </tr>
-                </thead>
-                <tbody id="contenedor-tablas">
-                    <tr><td>3 x 1 =</td><td class="res">3</td></tr>
-                    <tr><td>3 x 2 =</td><td class="res">6</td></tr>
-                    <tr><td>3 x 3 =</td><td class="res">9</td></tr>
-                    <tr><td>3 x 4 =</td><td class="res">12</td></tr>
-                    <tr><td>3 x 5 =</td><td class="res">15</td></tr>
-                    <tr><td>3 x 6 =</td><td class="res">18</td></tr>
-                    <tr><td>3 x 7 =</td><td class="res">21</td></tr>
-                    <tr><td>3 x 8 =</td><td class="res">24</td></tr>
-                    <tr><td>3 x 9 =</td><td class="res">27</td></tr>
-                    <tr><td>3 x 10 =</td><td class="res">30</td></tr>
-                </tbody>
-            </table>
+        <div id="area-tabla" style="display: none;">
+            <h1 id="titulo-tabla">¡La Divertida Tabla del 3!</h1>
+            <div class="table-container">
+                <table class="tabla-infantil">
+                    <thead>
+                        <tr>
+                            <th>Pregunta</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contenedor-tablas">
+                        </tbody>
+                </table>
+            </div>
         </div>
     </main>
 

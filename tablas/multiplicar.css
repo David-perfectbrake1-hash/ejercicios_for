@@ -167,3 +167,132 @@ h1 {
         font-size: 1.2rem;
     }
 }
+
+
+/* Estilo para el grupo de entrada (Parte 7) */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #01579b;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+#txt-numero {
+    padding: 10px;
+    border: 3px solid #4dd0e1;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 80px;
+    color: #ff9800;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#txt-numero:focus {
+    border-color: #ff9800;
+    background-color: #fffde7;
+}
+
+/* Ajuste responsivo para el header */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .input-group {
+        margin-right: 0;
+    }
+}
+
+
+/* Mensajes de ayuda y textos intuitivos */
+.instrucciones h2 {
+    color: #0288d1;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.ayuda-visual {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    border: 4px dashed #ffb74d;
+    margin: 20px 0;
+}
+
+.ayuda-visual p {
+    font-size: 1.5rem;
+    color: #f57c00;
+    font-weight: bold;
+}
+
+/* Efecto de foco para el input */
+#txt-numero:focus::placeholder {
+    color: transparent;
+}
+
+
+/* Separación del Header */
+.header {
+    display: flex;
+    flex-direction: column; /* Apila las instrucciones sobre los controles */
+    align-items: center;
+    padding: 30px 20px;
+    gap: 20px; /* Crea espacio entre el texto y el input */
+    background-color: #ffffff;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.instrucciones {
+    text-align: center;
+}
+
+.instrucciones h2 {
+    color: #0288d1;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.instrucciones p {
+    color: #546e7a;
+    font-size: 1.1rem;
+}
+
+/* Alineación de Input y Botón */
+.controles {
+    display: flex;
+    align-items: flex-end; /* Alinea el botón con la base del input */
+    gap: 15px; /* Espacio horizontal entre input y botón */
+    flex-wrap: wrap; /* Para que en celulares se pongan uno sobre otro */
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #e65100;
+    font-size: 1rem;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 480px) {
+    .controles {
+        flex-direction: column;
+        align-items: center;
+    }
+}
